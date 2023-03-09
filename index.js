@@ -1,0 +1,27 @@
+const express = require("express");
+const app = express();
+const port = 8000;
+
+const db = require("./config/mongoose");
+const Task = require("./models/task");
+
+// middleware to parse incoming encodedd requests
+app.use(express.urlencoded({ 'extended': true }));
+// use express routers
+app.use("/", require("./routes"));
+// use static files
+app.use(express.static("assets"));
+
+// set up ejs as the view engine
+app.set("view engine", "ejs");
+app.set("views", "./views");
+
+//listening to the port 8000
+app.listen(port, function (err) {
+  if (err) {
+    console.log(`Error in running the server : ${err}`);
+    return;
+  }
+
+  console.log(`Server is running on port: ${port}`);
+});

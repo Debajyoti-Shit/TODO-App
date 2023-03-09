@@ -1,0 +1,234 @@
+body{
+    margin: 0;
+    
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: #a900ec;
+    border-radius: 50px;
+}
+/* styling the heading section */
+#head{
+    background-size: contain;
+    height: 10vh;
+}
+
+#heading{
+    text-align: center;
+    background: -webkit-linear-gradient(90deg,#490066, #850dbd, #811ca0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#heading h1{
+    font-size: 3rem;
+    padding-top: 10px;
+    margin: 0;
+}
+
+/* styling the input form section */
+#tasks{
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 10rem;
+    background: linear-gradient(45deg,#4e0066, #00adcc, #6200ff);
+    position: relative;
+}
+
+#task-submission{
+    width: 50%;
+    margin: auto;
+    margin-bottom: -30px;
+    margin-top: -10px;
+}
+
+.form-group{
+    margin-bottom: 10px;
+}
+
+.label{
+    margin-bottom: 5px;
+    color: white;
+    font-size: medium;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+
+.col{
+    padding: 1px;
+}
+
+/* adding styles to add and delete buttons */
+#add-del-buttons{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+
+
+#add-task{
+    margin: 25px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: 1px solid #8df778;
+    border-radius: 50px 50px;
+    background-color: #06721e;
+    color: #fff;
+    width: 200px;
+    transition-duration: 0.5s;
+}
+
+#add-task:hover{
+    box-shadow: 0 0 3px 3px #17f85b;
+    transform: scale(1.05);
+}
+
+
+
+#del-task{
+    margin: 25px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: 1px solid #fa1ab7;
+    border-radius: 50px 50px;
+    background-color: #d80d62;
+    color: #fff;
+    width: 200px;
+    transition-duration: 0.5s;
+}
+
+#del-task:hover{
+    box-shadow: 0 0 3px 3px #ff1158;
+    transform: scale(1.05);
+}
+
+/* styling filter task section */
+#filter-task{
+    width: 40%;
+    padding-bottom: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+#select-category{
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+#filter-btn-container{
+    margin-top: 1.4rem;
+}
+
+#filter-btn{
+    padding: 0.5rem;
+    background-color: #cbff11;
+    border: 1px solid #f0ffad;
+    border-radius: 5px;
+    color: green;
+    font-weight: bold;
+}
+#filter-btn:hover{
+    background-color: green;
+    color: yellow;
+}
+
+/* styling task-list section */
+#task-list{
+    margin: auto;
+    width: 50%;
+    
+}
+
+.task-card{
+   display: flex;
+   height: 80px;
+   padding: 1rem;
+   color: seashell;
+   justify-content: space-around;
+   background-color: rgba(104, 92, 92, 0.095) !important;
+   border: 1px solid #ffffff9c;
+   transition-duration: 0.3s;
+   font-size: small;
+   text-transform: capitalize;
+}
+
+.task-card:hover{
+    box-shadow: 0 0 3px 3px #6cfc29;
+    transform: scale(1.05);
+}
+
+.description-date-container{
+    flex: 1;
+    margin-left: 0.5rem;
+}
+
+.checkboxes{
+    margin-right: 0.2rem;
+
+}
+
+.checkboxes>input[type=checkbox]{
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    margin-top: 0.6rem;
+}
+
+.description{
+    font-weight: normal;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.task-date{
+    font-weight:normal;
+}
+
+.category{
+    /* width: 6.5em; */
+    padding: 0.9rem;
+    text-align: center;
+    border-radius: 5%;
+}
+
+
+/* adding responsiveness */
+@media screen and (max-width: 1050px){
+    #filter-task{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 900px){
+    #add-del-buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 800px){
+    #task-list{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 750px) {
+    #heading h1 {
+        font-size: 3rem;
+
+    }
+}
+@media screen and (max-width: 700px){
+    #filter-task{
+        flex-direction: column;
+        align-items: center;
+    }
+}
